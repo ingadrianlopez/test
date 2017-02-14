@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-feb-2017, 17:20:56
+    Author     : Adrian Lopez Morales
+*/
+
+.myBorder{
+    padding: 10px; 
+    border: 1px #CCC solid;
+    background: #FFF;
+    font-family: Arial;
+    font-style: normal;
+}
+
+.title{
+    color:#143b67; font-weight:bold; font-style:normal; font-family:Arial;
+}
+
+.label {
+    display: block;
+    margin-bottom: 2px;
+    line-height: 19px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+    padding: inherit;
+}
+
+.form-control {
+    border-radius: inherit;
+}
+
+.classError{
+    color: #ac2925;
+    font-size: 11px;
+}
+
+.error-input {
+    background: #fff0f0;
+    border-color: #A90329;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+

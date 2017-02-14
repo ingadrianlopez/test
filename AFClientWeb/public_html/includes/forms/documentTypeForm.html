@@ -1,0 +1,45 @@
+<form name="form.formDocumentTypes" novalidate="novalidate">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nombre</label>
+                <input class="form-control" name="nameDocumentTypes"
+                       id="nameDocumentTypes" ng-model="DocumentType.name" 
+                       placeholder="NOMBRE" required maxlength="30" type="text"
+                       ng-class="{'error-input' : form.formDocumentTypes.nameDocumentTypes.$invalid && !form.formDocumentTypes.nameDocumentTypes.$pristine}"/>
+                <em class="classError" ng-show="form.formDocumentTypes.nameDocumentTypes.$invalid && !form.formDocumentTypes.nameDocumentTypes.$pristine">
+                    Campo Nombre es requerido.
+                </em>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Descripción</label>
+                <input type="text" class="form-control" name="descriptionDocumentTypes"
+                       id="descriptionDocumentTypes" ng-model="DocumentType.description" 
+                       placeholder="DESCRIPCION" required maxlength="100" type="text"
+                       ng-class="{'error-input' : form.formDocumentTypes.descriptionDocumentTypes.$invalid && !form.formDocumentTypes.descriptionDocumentTypes.$pristine}"/>
+                <em class="classError" ng-show="form.formDocumentTypes.descriptionDocumentTypes.$invalid && !form.formDocumentTypes.descriptionDocumentTypes.$pristine">
+                    Campo Descripción es requerido.
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <button ng-click="insertDocumentTypeAction(DocumentType);" ng-disabled="form.formDocumentTypes.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+        </div>
+    </div>
+    <div class="row" ng-if="gridDocumentType !== null && gridDocumentType.data !== null && gridDocumentType.data.length > 0">
+        <div class="col col-12">
+            <div ui-i18n="{{lenguaje}}">
+                <div id="gridDocumentType" ui-grid="gridDocumentType" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+            </div>
+        </div>
+    </div>
+</form>

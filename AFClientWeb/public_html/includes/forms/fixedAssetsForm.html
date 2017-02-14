@@ -1,0 +1,354 @@
+<uib-accordion close-others="true">
+    <div uib-accordion-group class="panel-info" is-open="true" template-url="" is-disable="false">
+        <uib-accordion-heading>
+            Registrar Activo
+        </uib-accordion-heading>
+        <form name="form.formFixedAssets" novalidate="novalidate">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Número Inventario</label>
+                        <input class="form-control" name="inventoryNumber"
+                               id="inventoryNumber" ng-model="FixedAssets.inventoryNumber" type="number"
+                               placeholder="NUMERO INVENTARIO" required
+                               ng-class="{'error-input' : form.formFixedAssets.inventoryNumber.$invalid && !form.formFixedAssets.inventoryNumber.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.inventoryNumber.$invalid && !form.formFixedAssets.inventoryNumber.$pristine">
+                            Campo Número de Inventario es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Serial</label>
+                        <input class="form-control" name="serial"
+                               id="serial" ng-model="FixedAssets.serial" type="text"
+                               placeholder="SERIAL" required maxlength="50"
+                               ng-class="{'error-input' : form.formFixedAssets.serial.$invalid && !form.formFixedAssets.serial.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.serial.$invalid && !form.formFixedAssets.serial.$pristine">
+                            Campo Serial es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Nombre</label>
+                        <input class="form-control" name="nameFixedAssets" type="text"
+                               id="nameFixedAssets" ng-model="FixedAssets.name" 
+                               placeholder="NOMBRE" required maxlength="30"
+                               ng-class="{'error-input' : form.formFixedAssets.nameFixedAssets.$invalid && !form.formFixedAssets.nameFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.nameFixedAssets.$invalid && !form.formFixedAssets.nameFixedAssets.$pristine">
+                            Campo Nombre es requerido.
+                        </em>
+                    </div>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Descripción</label>
+                        <input class="form-control" name="descriptionFixedAssets" type="text"
+                               id="descriptionFixedAssets" ng-model="FixedAssets.description" 
+                               placeholder="DESCRIPCION" required maxlength="100"
+                               ng-class="{'error-input' : form.formFixedAssets.descriptionFixedAssets.$invalid && !form.formFixedAssets.descriptionFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.descriptionFixedAssets.$invalid && !form.formFixedAssets.descriptionFixedAssets.$pristine">
+                            Campo Descripción es requerido.
+                        </em>
+                    </div>  
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Peso</label>
+                        <input class="form-control" name="weightFixedAssets"
+                               id="weightFixedAssets" ng-model="FixedAssets.weight" type="number"
+                               placeholder="PESO" required
+                               ng-class="{'error-input' : form.formFixedAssets.weightFixedAssets.$invalid && !form.formFixedAssets.weightFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.weightFixedAssets.$invalid && !form.formFixedAssets.weightFixedAssets.$pristine">
+                            Campo Peso es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Alto</label>
+                        <input class="form-control" name="highFixedAssets"
+                               id="highFixedAssets" ng-model="FixedAssets.high" type="number"
+                               placeholder="ALTO" required
+                               ng-class="{'error-input' : form.formFixedAssets.highFixedAssets.$invalid && !form.formFixedAssets.highFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.highFixedAssets.$invalid && !form.formFixedAssets.highFixedAssets.$pristine">
+                            Campo Alto es requerido.
+                        </em>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Ancho</label>
+                        <input class="form-control" name="widthFixedAssets"
+                               id="widthFixedAssets" ng-model="FixedAssets.width" type="number"
+                               placeholder="ANCHO" required
+                               ng-class="{'error-input' : form.formFixedAssets.widthFixedAssets.$invalid && !form.formFixedAssets.widthFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.widthFixedAssets.$invalid && !form.formFixedAssets.widthFixedAssets.$pristine">
+                            Campo Ancho es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Largo</label>
+                        <input class="form-control" name="lengthFixedAssets"
+                               id="lengthFixedAssets" ng-model="FixedAssets.length" type="number"
+                               placeholder="LARGO" required
+                               ng-class="{'error-input' : form.formFixedAssets.lengthFixedAssets.$invalid && !form.formFixedAssets.lengthFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.lengthFixedAssets.$invalid && !form.formFixedAssets.lengthFixedAssets.$pristine">
+                            Campo Largo es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Valor</label>
+                        <input class="form-control" name="valueFixedAssets"
+                               id="valueFixedAssets" ng-model="FixedAssets.value" type="number"
+                               placeholder="Valor" required
+                               ng-class="{'error-input' : form.formFixedAssets.valueFixedAssets.$invalid && !form.formFixedAssets.valueFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.valueFixedAssets.$invalid && !form.formFixedAssets.valueFixedAssets.$pristine">
+                            Campo Valor es requerido.
+                        </em>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Fecha Compra <span class="classError" style="font-style: italic">(Formato yyyy-mm-dd)</span> </label>
+                        <input class="form-control" name="dateBuyFixedAssets"
+                               id="dateBuyFixedAssets" ng-model="FixedAssets.dateBuy" 
+                               placeholder="yyyy-mm-dd" required
+                               type="date"
+                               ng-class="{'error-input' : form.formFixedAssets.dateBuyFixedAssets.$invalid && !form.formFixedAssets.dateBuyFixedAssets.$pristine}"/>
+                        <em class="classError" ng-show="form.formFixedAssets.dateBuyFixedAssets.$invalid && !form.formFixedAssets.dateBuyFixedAssets.$pristine">
+                            Campo Fecha Compra invalida.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Estado Activo</label>
+                        <select class="form-control" name="stateFixedAssets"
+                                id="stateFixedAssets" ng-model="FixedAssets.state" required >
+                            <option ng-repeat="row in vListActiveStatus" value="{{row.id}}">
+                                {{row.id}} - {{row.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Tipo Activo</label>
+                        <select class="form-control" name="activeTypeFixedAssets"
+                                id="activeTypeFixedAssets" ng-model="FixedAssets.activeType" required >
+                            <option ng-repeat="row in vListActiveType" value="{{row.id}}">
+                                {{row.id}} - {{row.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Color</label>
+                        <select class="form-control" name="colorFixedAssets"
+                                id="colorFixedAssets" ng-model="FixedAssets.color" required >
+                            <option ng-repeat="row in vListColor" value="{{row.id}}">
+                                {{row.id}} - {{row.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <button ng-click="insertFixedAssetsAction(FixedAssets);" ng-disabled="form.formFixedAssets.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+                </div>
+            </div>
+            <div class="row" ng-if="gridFixedAssets !== null && gridFixedAssets.data !== null && gridFixedAssets.data.length > 0">
+                <div class="col col-12">
+                    <div ui-i18n="{{lenguaje}}">
+                        <div id="gridFixedAssets" ui-grid="gridFixedAssets" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+        <uib-accordion-heading>
+            Buscar por Tipo
+        </uib-accordion-heading>
+        <form name="form.formActiveTypeFilter" novalidate="novalidate">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Tipo Activo</label>
+                        <select class="form-control" name="activeTypeFilter"
+                                id="activeTypeFilter" ng-model="Filter.activeType" required >
+                            <option ng-repeat="row in vListActiveType" value="{{row.id}}">
+                                {{row.id}} - {{row.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <button ng-click="listFixedAssetsByTypeAction(Filter);" ng-disabled="form.formActiveTypeFilter.$invalid" class="btn btn-danger btn-sm">Buscar</button>
+                </div>
+            </div>
+            <div class="row" ng-if="gridActiveTypeFilter !== null && gridActiveTypeFilter.data !== null && gridActiveTypeFilter.data.length > 0">
+                <div class="col col-12">
+                    <div ui-i18n="{{lenguaje}}">
+                        <div id="gridActiveTypeFilter" ui-grid="gridActiveTypeFilter" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+        <uib-accordion-heading>
+            Buscar por Fecha de Compra
+        </uib-accordion-heading>
+        <form name="form.formDateBuyFilter" novalidate="novalidate">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Fecha Compra</label>
+                        <input class="form-control" name="dateBuyFilter"
+                               id="dateBuyFilter" ng-model="Filter.dateBuy" 
+                               placeholder="yyyy-mm-dd" required
+                               type="date"                               
+                               ng-class="{'error-input' : form.formDateBuyFilter.dateBuyFilter.$invalid && !form.formDateBuyFilter.dateBuyFilter.$pristine}"/>
+                        <em class="classError" ng-show="form.formDateBuyFilter.dateBuyFilter.$invalid && !form.formDateBuyFilter.dateBuyFilter.$pristine">
+                            Campo Fecha Compra invalida.
+                        </em>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <button ng-click="listFixedAssetsByDateBuyAction(Filter);" ng-disabled="form.formDateBuyFilter.$invalid" class="btn btn-danger btn-sm">Buscar</button>
+                </div>
+            </div>
+            <div class="row" ng-if="gridDateBuyFilter !== null && gridDateBuyFilter.data !== null && gridDateBuyFilter.data.length > 0">
+                <div class="col col-12">
+                    <div ui-i18n="{{lenguaje}}">
+                        <div id="gridDateBuyFilter" ui-grid="gridDateBuyFilter" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+        <uib-accordion-heading>
+            Buscar por Serial
+        </uib-accordion-heading>
+        <form name="form.formSerialFilter" novalidate="novalidate">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Serial</label>
+                        <input class="form-control" name="serialFilter"
+                               id="serialFilter" ng-model="Filter.serial" type="text"
+                               placeholder="SERIAL" required maxlength="50"
+                               ng-class="{'error-input' : form.formSerialFilter.serialFilter.$invalid && !form.formSerialFilter.serialFilter.$pristine}"/>
+                        <em class="classError" ng-show="form.formSerialFilter.serialFilter.$invalid && !form.formSerialFilter.serialFilter.$pristine">
+                            Campo Serial es requerido.
+                        </em>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <button ng-click="listFixedAssetsBySerialAction(Filter);" ng-disabled="form.formSerialFilter.$invalid" class="btn btn-danger btn-sm">Buscar</button>
+                </div>
+            </div>
+            <div class="row" ng-if="gridSerialFilter !== null && gridSerialFilter.data !== null && gridSerialFilter.data.length > 0">
+                <div class="col col-12">
+                    <div ui-i18n="{{lenguaje}}">
+                        <div id="gridSerialFilter" ui-grid="gridSerialFilter" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+        <uib-accordion-heading>
+            Actualizar Activo
+        </uib-accordion-heading>
+        <form name="form.formUpdateFixedAssets" novalidate="novalidate">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h5 style="color:#143b67; font-weight: bold;">Favor seleccione un registro para editar</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Serial</label>
+                        <input class="form-control" name="serialUpdate"
+                               ng-disabled="true"
+                               id="serialUpdate" ng-model="FixedAssetsUpdate.serial" type="text"
+                               placeholder="NUMERO INVENTARIO INTERNO" required maxlength="20"
+                               ng-class="{'error-input' : form.formUpdateFixedAssets.serialUpdate.$invalid && !form.formUpdateFixedAssets.serialUpdate.$pristine}"/>
+                        <em class="classError" ng-show="form.formUpdateFixedAssets.serialUpdate.$invalid && !form.formUpdateFixedAssets.serialUpdate.$pristine">
+                            Campo Número Inventario es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Número Inventario</label>
+                        <input class="form-control" name="inventoryNumberUpdate"
+                               id="inventoryNumberUpdate" ng-model="FixedAssetsUpdate.inventoryNumber" type="number"
+                               placeholder="NUMERO INVENTARIO INTERNO" required
+                               ng-class="{'error-input' : form.formUpdateFixedAssets.inventoryNumberUpdate.$invalid && !form.formUpdateFixedAssets.inventoryNumberUpdate.$pristine}"/>
+                        <em class="classError" ng-show="form.formUpdateFixedAssets.inventoryNumberUpdate.$invalid && !form.formUpdateFixedAssets.inventoryNumberUpdate.$pristine">
+                            Campo Número Inventario es requerido.
+                        </em>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <label class="label">Fecha de Baja</label>
+                        <input class="form-control" name="dischargeDateUpdate"
+                               id="dischargeDateUpdate" ng-model="FixedAssetsUpdate.dischargeDate" 
+                               placeholder="yyyy-mm-dd" required
+                               type="date"                               
+                               ng-class="{'error-input' : form.formUpdateFixedAssets.dischargeDateUpdate.$invalid && !form.formUpdateFixedAssets.dischargeDateUpdate.$pristine}"/>
+                        <em class="classError" ng-show="form.formUpdateFixedAssets.dischargeDateUpdate.$invalid && !form.formUpdateFixedAssets.dischargeDateUpdate.$pristine">
+                            Campo Fecha de Baja invalida.
+                        </em>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <button ng-click="updateFixedAssetsAction(FixedAssetsUpdate)" ng-disabled="form.formUpdateFixedAssets.$invalid || !rowSelectGridFixedAssetsUpdate" class="btn btn-danger btn-sm">Actualizar</button>
+                    <button ng-click="cancelUpdateFixedAssetsAction();" ng-disabled="" class="btn btn-default btn-sm">Cancelar</button>
+                </div>
+            </div>
+            <div class="row" ng-if="gridFixedAssetsUpdate !== null && gridFixedAssetsUpdate.data !== null && gridFixedAssetsUpdate.data.length > 0">
+                <div class="col col-12">
+                    <div ui-i18n="{{lenguaje}}">
+                        <div id="gridFixedAssetsUpdate" ui-grid="gridFixedAssetsUpdate" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</uib-accordion>

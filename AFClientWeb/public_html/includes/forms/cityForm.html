@@ -1,0 +1,45 @@
+<form name="form.formCity" novalidate="novalidate">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nombre</label>
+                <input class="form-control" name="nameCity"
+                       id="nameCity" ng-model="City.name" 
+                       placeholder="NOMBRE CIUDAD" required maxlength="30" type="text"
+                       ng-class="{'error-input' : form.formCity.nameCity.$invalid && !form.formCity.nameCity.$pristine}"/>
+                <em class="classError" ng-show="form.formCity.nameCity.$invalid && !form.formCity.nameCity.$pristine">
+                    Campo Nombre es requerido.
+                </em>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Descripción</label>
+                <input class="form-control" name="descriptionCity"
+                       id="descriptionCity" ng-model="City.description" 
+                       placeholder="DESCRIPCION CIUDAD" required maxlength="100" type="text"
+                       ng-class="{'error-input' : form.formCity.descriptionCity.$invalid && !form.formCity.descriptionCity.$pristine}"/>
+                <em class="classError" ng-show="form.formCity.descriptionCity.$invalid && !form.formCity.descriptionCity.$pristine">
+                    Campo Descripción es requerido.
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <button ng-click="insertCityAction(City);" ng-disabled="form.formCity.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+        </div>
+    </div>
+    <div class="row" ng-if="gridCity !== null && gridCity.data !== null && gridCity.data.length > 0">
+        <div class="col col-12">
+            <div ui-i18n="{{lenguaje}}">
+                <div id="gridCity" ui-grid="gridCity" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+            </div>
+        </div>
+    </div>
+</form>

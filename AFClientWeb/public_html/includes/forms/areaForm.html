@@ -1,0 +1,63 @@
+<form name="form.formArea" novalidate="novalidate">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nombre</label>
+                <input class="form-control" name="nameArea"
+                       id="nameArea" ng-model="Area.name" type="text"
+                       placeholder="NOMBRE AREA" required maxlength="30"
+                       ng-class="{'error-input' : form.formArea.nameArea.$invalid && !form.formArea.nameArea.$pristine}"/>
+                <em class="classError" ng-show="form.formArea.nameArea.$invalid && !form.formArea.nameArea.$pristine">
+                    Campo Nombre es requerido.
+                </em>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Descripción</label>
+                <input class="form-control" name="descriptionArea" type="text"
+                       id="descriptionArea" ng-model="Area.description" 
+                       placeholder="DESCRIPCION AREA" required maxlength="100"
+                       ng-class="{'error-input' : form.formArea.descriptionArea.$invalid && !form.formArea.descriptionArea.$pristine}"/>
+                <em class="classError" ng-show="form.formArea.descriptionArea.$invalid && !form.formArea.descriptionArea.$pristine">
+                    Campo Descripción es requerido.
+                </em>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Ciudad</label>
+                <select class="form-control" name="city"
+                        id="city" ng-model="Area.city" 
+                        ng-class="{'error-input' : form.formArea.city.$invalid && !form.formArea.city.$pristine}"
+                        required >
+                    <option ng-repeat="row in vListCity" value="{{row.id}}">
+                        {{row.id}} - {{row.name}}
+                    </option>
+                </select>
+                <em class="classError" ng-show="form.formArea.city.$invalid && !form.formArea.city.$pristine">
+                    Campo Ciudad es requerido.
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <button ng-click="insertAreaAction(Area);" ng-disabled="form.formArea.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+        </div>
+    </div>
+    <div class="row" ng-if="gridArea !== null && gridArea.data !== null && gridArea.data.length > 0">
+        <div class="col col-12">
+            <div ui-i18n="{{lenguaje}}">
+                <div id="gridArea" ui-grid="gridArea" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+<form name="form.formColor" novalidate="novalidate">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nombre</label>
+                <input class="form-control" name="nameColor"
+                       id="nameColor" ng-model="Color.name" 
+                       placeholder="NOMBRE COLOR" required maxlength="30" type="text"
+                       ng-class="{'error-input' : form.formColor.nameColor.$invalid && !form.formColor.nameColor.$pristine}"/>
+                <em class="classError" ng-show="form.formColor.nameColor.$invalid && !form.formColor.nameColor.$pristine">
+                    Campo Nombre es requerido.
+                </em>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Descripción</label>
+                <input class="form-control" name="descriptionColor"
+                       id="descriptionColor" ng-model="Color.description" 
+                       placeholder="DESCRIPCION COLOR" required maxlength="100" type="text"
+                       ng-class="{'error-input' : form.formColor.descriptionColor.$invalid && !form.formColor.descriptionColor.$pristine}"/>
+                <em class="classError" ng-show="form.formColor.descriptionColor.$invalid && !form.formColor.descriptionColor.$pristine">
+                    Campo Descripción es requerido.
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <button ng-click="insertColorAction(Color);" ng-disabled="form.formColor.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+        </div>
+    </div>
+    <div class="row" ng-if="gridColor !== null && gridColor.data !== null && gridColor.data.length > 0">
+        <div class="col col-12">
+            <div ui-i18n="{{lenguaje}}">
+                <div id="gridColor" ui-grid="gridColor" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+            </div>
+        </div>
+    </div>
+</form>

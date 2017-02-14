@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html ng-app="activosFijosApp">
+    <head>
+        <title>Activos Fijos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="css/myStyle.css" rel="stylesheet" type="text/css" />
+        <link href="css/ui-grid.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery-confirm.css" rel="stylesheet" type="text/css" />
+        <link href="css/smartadmin-production.min.css" rel="stylesheet" type="text/css" /> 
+    </head>
+    <body>
+        <div class="container-fluid" ng-controller="mainController" style="padding: 10px;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="myBorder">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="title">Gestión Activos Fijos</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <uib-accordion close-others="true">
+                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                        <uib-accordion-heading>
+                                            Registro Parametros
+                                        </uib-accordion-heading>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <uib-accordion close-others="true">
+                                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                                        <uib-accordion-heading>
+                                                            Tipos de Documentos
+                                                        </uib-accordion-heading>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div ng-include="'includes/forms/documentTypeForm.html'"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                                        <uib-accordion-heading>
+                                                            Tipos de Activos
+                                                        </uib-accordion-heading>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div ng-include="'includes/forms/activeTypeForm.html'"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                                        <uib-accordion-heading>
+                                                            Estado de Activos
+                                                        </uib-accordion-heading>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div ng-include="'includes/forms/activeStatusForm.html'"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                                        <uib-accordion-heading>
+                                                            Colores
+                                                        </uib-accordion-heading>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div ng-include="'includes/forms/colorForm.html'"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                                        <uib-accordion-heading>
+                                                            Ciudades
+                                                        </uib-accordion-heading>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div ng-include="'includes/forms/cityForm.html'"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </uib-accordion>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                        <uib-accordion-heading>
+                                            Registro Area
+                                        </uib-accordion-heading>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div ng-include="'includes/forms/areaForm.html'"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div uib-accordion-group class="panel-info" is-open="false" template-url="" is-disable="false">
+                                        <uib-accordion-heading>
+                                            Registro Persona
+                                        </uib-accordion-heading>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div ng-include="'includes/forms/personForm.html'"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div uib-accordion-group class="panel-info" is-open="true" template-url="" is-disable="false">
+                                        <uib-accordion-heading>
+                                            Gestión Activos
+                                        </uib-accordion-heading>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div ng-include="'includes/forms/fixedAssetsForm.html'"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-accordion>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Librerias Generales-->
+            <script src="js/libs/jquery/jquery-2.2.3.js" type="text/javascript"></script>
+            <script src="js/libs/angular/angular.js" type="text/javascript"></script>
+            <script src="js/libs/angular/angular-route.js" type="text/javascript"></script>
+            <script src="js/libs/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+            <!--Librerias ui-tab-->
+            <script src="js/libs/angular/angular-animate.js" type="text/javascript"></script>
+            <script src="js/libs/angular/angular-sanitize.js" type="text/javascript"></script>
+
+            <!--Message Box-->
+            <script src="js/libs/jquery/jquery-confirm.js" type="text/javascript"></script>
+
+            <!--Grid-->
+            <script src="js/libs/grid/ui-grid.js" type="text/javascript"></script>
+
+            <!--app-->
+            <script src="js/app.js" type="text/javascript"></script>
+            <script src="js/services/service.js" type="text/javascript"></script>
+            <script src="js/controllers/mainController.js" type="text/javascript"></script>         
+
+            <!--Modal-->
+            <script src="js/libs/angular/ui-bootstrap-tpls-2.0.1.js" type="text/javascript"></script>
+
+            <!--loading-->
+            <script src="js/libs/loading/angular-spinner.min.js" type="text/javascript"></script>
+            <script src="js/libs/loading/angular-loading-spinner.js" type="text/javascript"></script>
+            <script src="js/libs/loading/spin.min.js" type="text/javascript"></script>
+            
+            <!--Customs-->
+            <script src="js/custom/custom.js" type="text/javascript"></script>
+            <script src="js/config/config.js" type="text/javascript"></script>
+    </body>
+</html>

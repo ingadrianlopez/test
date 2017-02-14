@@ -1,0 +1,70 @@
+<form name="form.formPerson" novalidate="novalidate">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nro. Identificación</label>
+                <input class="form-control" name="identification"
+                       id="identification" ng-model="Person.identification" type="number"
+                       placeholder="NUMERO IDENTIFICACION" required
+                       ng-class="{'error-input' : form.formPerson.identification.$invalid && !form.formPerson.identification.$pristine}"/>
+                <em class="classError" ng-show="form.formPerson.identification.$invalid && !form.formPerson.identification.$pristine">
+                    Campo Identificación es requerido.
+                </em>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Tipo Documento</label>
+                <select class="form-control" name="city"
+                        id="city" ng-model="Person.documentType" required >
+                    <option ng-repeat="row in vListDocumentType" value="{{row.id}}">
+                        {{row.id}} - {{row.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nombre</label>
+                <input class="form-control" name="namePerson" type="text"
+                       id="namePerson" ng-model="Person.name" 
+                       placeholder="NOMBRE PERSONA" required maxlength="50"
+                       ng-class="{'error-input' : form.formPerson.namePerson.$invalid && !form.formPerson.namePerson.$pristine}"/>
+                <em class="classError" ng-show="form.formPerson.namePerson.$invalid && !form.formPerson.namePerson.$pristine">
+                    Campo Nombre es requerido.
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Apellido</label>
+                <input class="form-control" name="lastNamePerson" type="text"
+                       id="lastNamePerson" ng-model="Person.lastName" 
+                       placeholder="APELLIDO PERSONA" required maxlength="50"
+                       ng-class="{'error-input' : form.formPerson.lastNamePerson.$invalid && !form.formPerson.lastNamePerson.$pristine}"/>
+                <em class="classError" ng-show="form.formPerson.lastNamePerson.$invalid && !form.formPerson.lastNamePerson.$pristine">
+                    Campo Apellido es requerido.
+                </em>
+            </div>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <button ng-click="insertPersonAction(Person);" ng-disabled="form.formPerson.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+        </div>
+    </div>
+    <div class="row" ng-if="gridPerson !== null && gridPerson.data !== null && gridPerson.data.length > 0">
+        <div class="col-xs-12">
+            <div ui-i18n="{{lenguaje}}">
+                <div id="gridPerson" ui-grid="gridPerson" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+            </div>
+        </div>
+    </div>
+</form>

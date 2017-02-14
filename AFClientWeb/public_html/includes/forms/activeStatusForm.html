@@ -1,0 +1,45 @@
+<form name="form.formActiveStatus" novalidate="novalidate">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 style="color:#143b67; font-weight: bold;">Favor diligencie los campos</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Nombre</label>
+                <input class="form-control" name="nameState"
+                       id="nameState" ng-model="ActiveStatus.name" type="text"
+                       placeholder="NOMBRE ESTADO" required maxlength="30"
+                       ng-class="{'error-input' : form.formActiveStatus.nameState.$invalid && !form.formActiveStatus.nameState.$pristine}"/>
+                <em class="classError" ng-show="form.formActiveStatus.nameState.$invalid && !form.formActiveStatus.nameState.$pristine">
+                    Campo Nombre es requerido.
+                </em>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label class="label">Descripción</label>
+                <input class="form-control" name="descriptionState" type="text"
+                       id="descriptionState" ng-model="ActiveStatus.description" 
+                       placeholder="DESCRIPCION ESTADO" required maxlength="100"
+                       ng-class="{'error-input' : form.formActiveStatus.descriptionState.$invalid && !form.formActiveStatus.descriptionState.$pristine}"/>
+                <em class="classError" ng-show="form.formActiveStatus.descriptionState.$invalid && !form.formActiveStatus.descriptionState.$pristine">
+                    Campo Descripción es requerido.
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <button ng-click="insertActiveStatusAction(ActiveStatus);" ng-disabled="form.formActiveStatus.$invalid" class="btn btn-primary btn-sm">Guardar</button>
+        </div>
+    </div>
+    <div class="row" ng-if="gridActiveStatus !== null && gridActiveStatus.data !== null && gridActiveStatus.data.length > 0">
+        <div class="col col-12">
+            <div ui-i18n="{{lenguaje}}">
+                <div id="gridActiveStatus" ui-grid="gridActiveStatus" ui-grid-cellNav ui-grid-selection ui-grid-resize-columns ui-grid-auto-resize ui-grid-exporter class="grid4"></div>
+            </div>
+        </div>
+    </div>
+</form>
