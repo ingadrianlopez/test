@@ -14,9 +14,8 @@ public interface IAreaDao {
     /**
      * Especifica el metodo obtener las areas de la base de datos
      * @return listado de areas
-     * @throws IOException 
      */
-    List<AreaModel> listArea() throws IOException;
+    List<AreaModel> listArea();
     
     /**
      * Especifica el metodo crear una nueva area en la base de datos

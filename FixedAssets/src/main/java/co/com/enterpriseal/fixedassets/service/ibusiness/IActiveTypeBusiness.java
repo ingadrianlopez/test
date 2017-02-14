@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Especifica la implementacion de la clase ActiveTypeBusiness
+ * @since 2017-02-14
  * @author aye
  */
 public interface IActiveTypeBusiness {

@@ -2,7 +2,6 @@ package co.com.enterpriseal.fixedassets.service.business;
 
 import java.util.List;
 import co.com.enterpriseal.fixedassets.persistence.model.ActiveStatusModel;
-import co.com.enterpriseal.fixedassets.persistence.dao.ActiveStatusDao;
 import co.com.enterpriseal.fixedassets.persistence.idao.IActiveStatusDao;
 import co.com.enterpriseal.fixedassets.service.ibusiness.IActiveStatusBusiness;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +17,6 @@ public class ActiveStatusBusiness implements IActiveStatusBusiness{
 	
     @Autowired
     IActiveStatusDao statusDao;
-    
-    /**
-     * Constructor
-     */
-    public ActiveStatusBusiness(){
-        statusDao = new ActiveStatusDao();
-    }
     
     /**
      * Obtiene la lista con los estados de los activos

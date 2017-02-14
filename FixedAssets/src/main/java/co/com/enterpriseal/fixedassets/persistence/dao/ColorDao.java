@@ -51,7 +51,7 @@ public class ColorDao implements IColorDao {
      
      */
     @Override
-    public boolean updateColor(ColorModel pColorModel) throws IOException {
+    public boolean updateColor(ColorModel pColorModel) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -62,7 +62,7 @@ public class ColorDao implements IColorDao {
      * @throws IOException 
      */
     @Override
-    public boolean deleteColor(ColorModel pColorModel) throws IOException {
+    public boolean deleteColor(ColorModel pColorModel) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
