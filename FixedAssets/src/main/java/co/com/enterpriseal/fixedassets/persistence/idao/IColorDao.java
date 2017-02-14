@@ -14,31 +14,27 @@ public interface IColorDao {
     /**
      * Especifica el metodo listar colores
      * @return listado de los colores
-     * @throws IOException 
      */
-    List<ColorModel> listColor() throws IOException;
+    List<ColorModel> listColor();
     
     /**
      * Especifica el metodo crear nuevo registro color
      * @param pColorModel objeto ColorModel
      * @return
-     * @throws IOException 
      */
-    boolean insertColor(ColorModel pColorModel) throws IOException;
+    boolean insertColor(ColorModel pColorModel);
     
     /**
      * Especifica el metodo actualizar registro color
      * @param pColorModel objeto ColorModel
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean updateColor(ColorModel pColorModel) throws IOException;
+    boolean updateColor(ColorModel pColorModel);
     
     /**
      * Especifica el metodo eliminar registro color
      * @param pColorModel objeto ColorModel
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean deleteColor(ColorModel pColorModel) throws IOException;
+    boolean deleteColor(ColorModel pColorModel);
 }

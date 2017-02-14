@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author AdrianL
  */
 public interface IAreaDao {
-	/**
+    /**
      * Especifica el metodo obtener las areas de la base de datos
      * @return listado de areas
      * @throws IOException 
@@ -22,23 +22,20 @@ public interface IAreaDao {
      * Especifica el metodo crear una nueva area en la base de datos
      * @param pAreaModel Objeto Area Model
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean insertArea(AreaModel pAreaModel) throws IOException;
+    boolean insertArea(AreaModel pAreaModel);
     
     /**
      * Especifica el metodo actualizar area en la base de datos
      * @param pAreaModel Objeto Area Model
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean updateArea(AreaModel pAreaModel) throws IOException;
+    boolean updateArea(AreaModel pAreaModel);
     
     /**
      * Especifica el metodo eliminar area en la base de datos
      * @param pAreaModel Objeto Area Model
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean deleteArea(AreaModel pAreaModel) throws IOException;
+    boolean deleteArea(AreaModel pAreaModel);
 }

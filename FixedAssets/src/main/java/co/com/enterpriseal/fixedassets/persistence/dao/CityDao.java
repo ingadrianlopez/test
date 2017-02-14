@@ -33,7 +33,7 @@ public class CityDao implements ICityDao {
      * @throws IOException
      */
     @Override
-    public List<CityModel> listArea() {
+    public List<CityModel> listCity() {
         return jdbcTemplate.query(SQL_SELECT, new CityHelper());
     }
 

@@ -11,34 +11,30 @@ import java.io.IOException;
  * @author AdrianL
  */
 public interface IDocumentTypeDao {
-	/**
+    /**
      * Especifica metodo Listar los tipos de documentos de la base de datos
      * @return listado de los tipos de documentos
-     * @throws IOException 
      */
-    List<DocumentTypeModel> listDocumentType() throws IOException;
+    List<DocumentTypeModel> listDocumentType();
     
     /**
      * Especifica metodo Crear un nuevo tipo documento en la base de datos
      * @param pDocumentTypeModel
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean insertDocumentType(DocumentTypeModel pDocumentTypeModel) throws IOException;
+    boolean insertDocumentType(DocumentTypeModel pDocumentTypeModel);
     
     /**
      * Especifica metodo actualizar tipo documento en la base de datos
      * @param pDocumentTypeModel
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean updateDocumentType(DocumentTypeModel pDocumentTypeModel) throws IOException;
+    boolean updateDocumentType(DocumentTypeModel pDocumentTypeModel);
     
     /**
      * Especifica metodo eliminar tipo documento en la base de datos
      * @param pDocumentTypeModel
      * @return true si la operacion se completo con exito
-     * @throws IOException 
      */
-    boolean deleteDocumentType(DocumentTypeModel pDocumentTypeModel) throws IOException;
+    boolean deleteDocumentType(DocumentTypeModel pDocumentTypeModel);
 }
