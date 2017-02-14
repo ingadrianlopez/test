@@ -11,6 +11,7 @@ import co.com.enterpriseal.fixedassets.service.ibusiness.ICityBusiness;
 import co.com.enterpriseal.fixedassets.service.ibusiness.IColorBusiness;
 import co.com.enterpriseal.fixedassets.service.ibusiness.IDocumentTypeBusiness;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -39,6 +40,8 @@ public class SettingsService {
     ICityBusiness cityBusiness;
     @Autowired
     IDocumentTypeBusiness documentTypeBusiness;
+    
+    private final Logger logger = Logger.getLogger(ManagementService.class);
 
     /**
      * Servicio que obtiene los estados de activos
@@ -61,7 +64,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "listActiveStatus");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -88,7 +91,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "insertActiveStatus");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -114,7 +117,7 @@ public class SettingsService {
         } catch (Exception ex) {
             responseHeaders.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "listActiveType");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -141,7 +144,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "insertActiveType");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -167,7 +170,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "listColor");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -194,7 +197,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "insertColor");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -220,7 +223,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "listCity");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -247,7 +250,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "insertCity");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -273,7 +276,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "listDocumentType");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -300,7 +303,7 @@ public class SettingsService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "Service", "insertDocumentType");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }

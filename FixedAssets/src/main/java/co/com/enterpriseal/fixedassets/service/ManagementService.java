@@ -7,6 +7,7 @@ import co.com.enterpriseal.fixedassets.persistence.model.PersonModel;
 import co.com.enterpriseal.fixedassets.service.ibusiness.IAreaBusiness;
 import co.com.enterpriseal.fixedassets.service.ibusiness.IPersonBusiness;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -33,6 +34,8 @@ public class ManagementService {
     IAreaBusiness areaBusiness;
     @Autowired
     IPersonBusiness personBusiness;
+    
+    private final Logger logger = Logger.getLogger(ManagementService.class);
 
     /**
      * Lista las areas parametrizadas en el sistema
@@ -56,7 +59,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "listArea");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -84,6 +87,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -110,7 +114,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "listPerson");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -138,7 +142,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "insertPerson");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -166,7 +170,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "insertFixedAssets");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -193,7 +197,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "listFixedAssets");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -223,7 +227,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "listFixedAssetsByType");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -253,7 +257,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "listFixedAssetsByDateBuy");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -283,7 +287,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "listFixedAssetsBySerial");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
@@ -311,7 +315,7 @@ public class ManagementService {
         } catch (Exception ex) {
             headers.set("myResponse", "Ocurrio un error al procesar la consulta. Error: " + ex.getMessage());
             responseEntity = new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR); // 500
-            //Logger.writeError(ex.getMessage(), 0, "ManagementService", "updateFixedAssets");
+            logger.error(ex.getMessage(), ex);
         }
         return responseEntity;
     }
